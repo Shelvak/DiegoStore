@@ -6,6 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+begin
+  Spree::Core::Engine.load_seed if defined?(Spree::Core)
+rescue
+  puts "bombita"
+end
 
-Spree::Core::Engine.load_seed if defined?(Spree::Core)
-Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+begin
+  Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+rescue
+  puts "bombita"
+end
