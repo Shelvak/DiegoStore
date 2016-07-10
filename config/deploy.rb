@@ -7,7 +7,8 @@ set :deploy_to, '/home/rotsen/rails/diego_store'
 set :deploy_via, :remote_cache
 
 set :format, :pretty
-set :log_level, ENV['log_level'] || :info
+set :log_level, :debug #ENV['log_level'] || :info
+set :pty, true
 
 set :linked_files, %w(config/app_config.yml config/secrets.yml)
 set :linked_dirs, %w(log private certs)

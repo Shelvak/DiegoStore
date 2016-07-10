@@ -83,5 +83,3 @@ test:
 production:
   <<: *default
   database: diego_store_production
-  username: diego_store
-  password: <%= ENV['DIEGO_STORE_DATABASE_PASSWORD'] %>

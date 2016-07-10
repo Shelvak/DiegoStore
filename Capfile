@@ -1,6 +1,6 @@
 require 'capistrano/setup'
-require 'capistrano/chruby'
 require 'capistrano/deploy'
+require 'capistrano/chruby'
 require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
